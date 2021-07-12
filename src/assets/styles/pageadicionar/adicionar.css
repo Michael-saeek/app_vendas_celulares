@@ -1,0 +1,79 @@
+.container_adicionar {
+  position: relative;
+  margin: 0 auto;
+  width: 40%;
+  height: 65%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 12rem 12rem;
+  grid-template-rows: 4rem 20rem 3rem;
+  grid-template-areas: "title title" "col1 col2";
+}
+.container_adicionar .title_detalhesProduto {
+  display: grid;
+  position: relative;
+  bottom: -1rem;
+  grid-area: title;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+}
+.container_adicionar .column1 {
+  display: grid;
+  grid-area: col1;
+}
+.container_adicionar .column2 {
+  display: grid;
+  position: relative;
+  grid-area: col2;
+}
+.container_adicionar .list-buttons {
+  position: relative;
+  grid-area: 3/2/4/4;
+  right: 0.6rem;
+  margin-top: 1.5rem;
+}
+.container_adicionar .list-buttons button {
+  font-weight: 600;
+  margin-left: 0.7rem;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 2rem;
+  width: 10rem;
+  padding: 5px;
+}
+
+p {
+  font-weight: 700;
+}
+
+.options {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 2.7rem;
+  width: 10.7rem;
+  padding: 5px;
+}
+
+@media (max-width: 476px) {
+  .container_adicionar {
+    grid-template-columns: 11rem 10rem;
+    grid-template-rows: 2rem 18rem 2rem;
+  }
+  .container_adicionar input {
+    width: 9rem;
+  }
+  .container_adicionar .list-buttons {
+    grid-area: 3/1/4/3;
+    right: -4rem;
+  }
+
+  .column1 .options {
+    width: 9.9rem;
+  }
+}/*# sourceMappingURL=adicionar.css.map */

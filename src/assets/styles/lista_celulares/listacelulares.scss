@@ -1,0 +1,66 @@
+.container_celulares {
+    position: relative;
+    height: 27rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.table-encabecalho {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    position: relative;
+    border-spacing: 0;
+    height: 80%;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #DAE3ED;
+
+   td {
+       border-bottom: 1px solid #DAE3ED;
+   }
+
+   thead {
+    font-weight: 700;
+
+    td{
+        padding: 1.3rem 0
+    }
+   }
+}
+
+
+@media (max-width: 476px) {
+    table {
+        height: 83%;
+        font-size: 9.5px;
+
+    .table_encabecalho h2 {
+        font-size: 1.2em;
+    }
+
+    }
+
+    .container_celulares { 
+        height: 25rem;
+    }
+
+    .table-encabecalho {
+        width: 130%;
+        height: 2rem;
+        align-items: center;
+    }
+
+  
+}
+
+

@@ -1,0 +1,101 @@
+.buttonAdicionar {
+  align-self: center;
+  border: 0px solid black;
+  background-color: #DAE3ED;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 2rem;
+  color: #1d1d1d;
+  padding: 5px 20px;
+  transition: all 200ms ease-in-out;
+}
+.buttonAdicionar a {
+  text-decoration: none;
+  color: inherit;
+}
+.buttonAdicionar:hover {
+  background-color: #2ba044;
+  transform: scale(1.1);
+  color: #DAE3ED;
+}
+.buttonAdicionar i {
+  font-size: 16px;
+  padding: 0 8px 0 4px;
+}
+
+.buttonProduto {
+  border: 1px solid black;
+  background-color: #DAE3ED;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #1D1D1D;
+  padding: 8px 13px;
+  transition: all 200ms ease-in-out;
+}
+.buttonProduto:hover {
+  background-color: #1D1D1D;
+  transform: scale(1.1);
+  color: #DAE3ED;
+}
+.buttonProduto a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.buttom-modificar {
+  padding: 10px 13px;
+  border-radius: 10px;
+  border: 0px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.buttom-modificar:hover {
+  background-color: #211992;
+  transform: scale(1.1);
+  color: #DAE3ED;
+}
+.buttom-modificar a {
+  color: inherit;
+}
+
+.buttom-delete {
+  padding: 10px 13px;
+  border-radius: 10px;
+  border: 0px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.buttom-delete:hover {
+  background-color: #c21111;
+  transform: scale(1.1);
+  color: #DAE3ED;
+}
+.buttom-delete a {
+  color: inherit;
+}
+
+@media (max-width: 476px) {
+  i {
+    font-size: 12px;
+  }
+
+  .buttonAdicionar {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .buttom-modificar {
+    font-size: 0.5rem;
+    padding: 7px 12px;
+  }
+
+  .buttom-delete {
+    font-size: 0.5rem;
+    padding: 7px 12px;
+  }
+
+  .list-buttons {
+    right: -4rem;
+    grid-area: 3/1/4/3;
+  }
+}/*# sourceMappingURL=button.css.map */
