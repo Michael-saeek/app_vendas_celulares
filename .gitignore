@@ -8,6 +8,18 @@
 # testing
 /coverage
 
+./src/services
+
+/src/services
+
+/firebase.js
+
+.firebase/
+.firebaserc
+.github/
+firebase.json
+y/
+
 # misc
 .DS_Store
 .env.local
