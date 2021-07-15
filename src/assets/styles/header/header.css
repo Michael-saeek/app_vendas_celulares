@@ -1,16 +1,14 @@
 .header {
-  top: 0;
-  width: 100%;
-  height: 5.5rem;
+  display: grid;
+  grid-area: head;
   background-color: #054A91;
-  display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Nunito", roboto;
 }
 
 span {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 700;
   color: #DAE3ED;
 }
@@ -27,13 +25,9 @@ span .title-secondpt {
   border-radius: 7px;
 }
 
-@media (max-width: 476px) {
+@media (max-width: 667px) {
   span {
-    font-size: 1.3rem;
-  }
-
-  .header {
-    height: 4.8rem;
+    font-size: 1.3em;
   }
 
   h2 {
@@ -41,6 +35,6 @@ span .title-secondpt {
   }
 
   .logo-img {
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
 }/*# sourceMappingURL=header.css.map */

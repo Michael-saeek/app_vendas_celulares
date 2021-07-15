@@ -1,79 +1,106 @@
 .container_adicionar {
   position: relative;
   margin: 0 auto;
-  width: 40%;
-  height: 65%;
-  display: grid;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  grid-area: tb;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 12rem 12rem;
-  grid-template-rows: 4rem 20rem 3rem;
-  grid-template-areas: "title title" "col1 col2";
+  flex-direction: column;
+  font-family: "Roboto";
 }
 .container_adicionar .title_detalhesProduto {
-  display: grid;
   position: relative;
-  bottom: -1rem;
-  grid-area: title;
   font-size: 1.4rem;
   color: black;
   font-weight: 700;
-  text-align: center;
 }
-.container_adicionar .column1 {
-  display: grid;
-  grid-area: col1;
+.container_adicionar .list_columns {
+  display: flex;
+  margin: 1.5rem 0;
 }
-.container_adicionar .column2 {
-  display: grid;
+.container_adicionar .list_columns .column1 {
+  display: flex;
+  margin-right: 1rem;
+  flex-direction: column;
   position: relative;
-  grid-area: col2;
 }
-.container_adicionar .list-buttons {
+.container_adicionar .list_columns .column2 {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  grid-area: 3/2/4/4;
-  right: 0.6rem;
-  margin-top: 1.5rem;
 }
-.container_adicionar .list-buttons button {
-  font-weight: 600;
-  margin-left: 0.7rem;
-}
-
-input {
-  border: 1px solid black;
-  border-radius: 10px;
-  height: 2rem;
-  width: 10rem;
-  padding: 5px;
-}
-
-p {
+.container_adicionar .list_columns label {
+  margin-bottom: 0.5rem;
   font-weight: 700;
+}
+.container_adicionar .list_columns .input {
+  border: 1px solid rgba(189, 188, 188, 0.459);
+  border-radius: 5px;
+  height: 2rem;
+  width: 12rem;
+  padding: 5px 11px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.container_adicionar .list_columns .input:focus {
+  border: 1px solid #0e29c0;
+  box-shadow: 0 1px 1px rgba(207, 202, 198, 0.075) inset, 0 0 4px rgba(32, 18, 158, 0.6);
+  outline: 0 none;
+}
+.container_adicionar .list_columns .input_valido {
+  border: 1px solid #0eaa23;
+  box-shadow: 0 1px 1px rgba(207, 202, 198, 0.075) inset, 0 0 4px rgba(18, 158, 41, 0.6);
+  outline: 0 none;
+}
+.container_adicionar .list_columns .input_invalido {
+  border: 1px solid #c00c0c;
+  box-shadow: 0 1px 1px rgba(207, 202, 198, 0.075) inset, 0 0 4px rgba(158, 18, 18, 0.6);
+  outline: 0 none;
 }
 
 .options {
-  border: 1px solid black;
-  border-radius: 10px;
-  height: 2.7rem;
-  width: 10.7rem;
+  border: 1px solid rgba(189, 188, 188, 0.459);
+  border-radius: 5px;
+  height: 2.8rem;
+  width: 13.6rem;
   padding: 5px;
+  margin-bottom: 1rem;
+}
+.options:focus {
+  border: 1px solid #054A91;
+  box-shadow: 0 1px 1px rgba(207, 202, 198, 0.075) inset, 0 0 8px rgba(32, 18, 158, 0.6);
+  outline: 0 none;
 }
 
-@media (max-width: 476px) {
+.options_valido {
+  border: 1px solid #0eaa23;
+  box-shadow: 0 1px 1px rgba(207, 202, 198, 0.075) inset, 0 0 4px rgba(18, 158, 41, 0.6);
+  outline: 0 none;
+}
+
+.options_invalido {
+  border: 1px solid #c00c0c;
+  box-shadow: 0 1px 1px rgba(207, 202, 198, 0.075) inset, 0 0 4px rgba(18, 158, 41, 0.6);
+  outline: 0 none;
+}
+
+.container_input {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 667px) {
+  .container_adicionar .list_columns .input {
+    width: 10rem;
+  }
+
   .container_adicionar {
-    grid-template-columns: 11rem 10rem;
-    grid-template-rows: 2rem 18rem 2rem;
-  }
-  .container_adicionar input {
-    width: 9rem;
-  }
-  .container_adicionar .list-buttons {
-    grid-area: 3/1/4/3;
-    right: -4rem;
+    margin: 1rem 0;
   }
 
   .column1 .options {
-    width: 9.9rem;
+    width: 11.8rem;
   }
 }/*# sourceMappingURL=adicionar.css.map */

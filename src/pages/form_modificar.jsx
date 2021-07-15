@@ -15,8 +15,6 @@ const Form_modificar = () => {
         endDate: '',
         cor: ''
     }
-
-
     const [ produto, setProduto ] = useState(initialStateCadastrar)
     
     const handleInputChange = (e) => {
@@ -87,45 +85,53 @@ const Form_modificar = () => {
     return (
       
         <form action="POST" className="container_adicionar" onSubmit={handleSubmit}>
-            <label htmlFor="form" className="title_detalhesProduto">Detalhes do produto</label>
+            <label className="title_detalhesProduto">Detalhes do produto</label>
 
-            <div className="column1">
-                <p className="title-input">Modelo</p>
-                <input type="text" name="model" placeholder="XT2041-1" onChange={handleInputChange} value={produto.model}/>
+            <section className="list_columns">
 
-                <p className="title-input">Cor</p>
-                <select name="cor" className="options" onChange={handleInputChange}>
-                    <option value={produto.cor}>COR</option> 
-                    <option value="BLACK">BLACK</option> 
-                    <option value="WHITE">WHITE</option> 
-                    <option value="GOLD">GOLD</option> 
-                    <option value="PINK">PINK</option> 
-                </select>
-                <p className="title-input">Inicio das vendas</p>
-                <input type="date" name="startDate" placeholder="15/03/2020" onChange={handleInputChange} value={produto.startDate}/>
-            </div>
+                <div className="column1">
+                    <label name="model" className="title-input">Modelo</label>
+                    <input type="text" name="model" className="input" placeholder="XT2041-1" onChange={handleInputChange} value={produto.model}/>
 
-            <div className="column2">
-                <p className="title-input">Marca</p>
-                <input type="text" name="brand" placeholder="Motorola" onChange={handleInputChange} value={produto.brand}/>
+                    <label className="title-input">Cor</label>
+                    <select name="cor" className="options" onChange={handleInputChange}>
+                        <option value={produto.cor}>{produto.cor}</option> 
+                        <option value="BLACK">BLACK</option> 
+                        <option value="WHITE">WHITE</option> 
+                        <option value="GOLD">GOLD</option> 
+                        <option value="PINK">PINK</option> 
+                    </select>
+                    <label className="title-input">Inicio das vendas</label>
+                    <input type="date" name="startDate" className="input" placeholder="15/03/2020" onChange={handleInputChange} value={produto.startDate}/>
+                </div>
 
-                <p className="title-input">Preço</p>
-                <input type="number" name="price" placeholder="1.400,00" onChange={handleInputChange} value={produto.price}/>
+                <div className="column2">
+                    <label className="title-input">Marca</label>
+                    <input 
+                    type="text" 
+                    name="brand" 
+                    className="input"
+                    placeholder="Motorola" 
+                    onChange={handleInputChange} 
+                    value={produto.brand}/>
 
-                <p className="title-input">Fin das vendas</p>
-                <input type="date" name="endDate" placeholder="14/06/2020" onChange={handleInputChange} value={produto.endDate}/>
-            </div>
+                    <label className="title-input">Preço</label>
+                    <input type="number" name="price" className="input" placeholder="1.400,00" onChange={handleInputChange} value={produto.price}/>
+
+                    <label className="title-input">Fin das vendas</label>
+                    <input type="date" name="endDate" className="input" placeholder="14/06/2020" onChange={handleInputChange} value={produto.endDate}/>
+                </div>
+
+            </section>
 
             <div className="list-buttons">
-                <button className="buttonProduto">
-
-                    <NavLink exact to="/">
-                        VOLTAR
-                    </NavLink>
-                </button>
+        
+                <NavLink exact to="/" className="buttonProduto">
+                    VOLTAR
+                </NavLink>
 
                 <button type="submit" className="buttonProduto">
-                         {currentId === "" ? "SALVAR" : "EDIT"}
+                    MODIFICAR
                 </button>
             </div>
         </form>

@@ -26,14 +26,19 @@ useEffect(() => {
     gettingData();
 }, [])
 
-console.log(data)
+
 
     return (
         <div className="container_celulares">
 
             <div className="table-encabecalho">
             <h2>Produtos</h2>
-            <Button className="buttonAdicionar" value='ADICIONAR' url="/adicionar" icon1="fas fa-plus" icon2="fas fa-mobile-alt"/>
+            <Button 
+            className="buttonAdicionar" 
+            value='ADICIONAR' 
+            url="/adicionar" 
+            icon1="fas fa-plus" 
+            icon2="fas fa-mobile-alt"/>
                 
             </div>
             
@@ -45,8 +50,8 @@ console.log(data)
                         <td>Preço</td>
                         <td>Marca</td>
                         <td>Cor</td>
-                        <td></td>
-                        <td></td>
+                        <td>Ação</td>
+                
                     </tr>
                 </thead>
 

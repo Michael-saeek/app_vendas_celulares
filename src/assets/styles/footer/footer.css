@@ -1,23 +1,14 @@
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 5.5rem;
   background-color: #054A91;
-  display: flex;
+  display: grid;
+  grid-area: footer;
   justify-content: center;
   align-items: center;
   font-family: "Roboto";
+  margin-top: 1.5rem;
 }
-
-.footer > p {
-  font-size: 12px;
+.footer p {
+  font-size: 0.7em;
   color: #DAE3ED;
   text-align: center;
-}
-
-@media (max-width: 476px) {
-  .footer {
-    bottom: 0;
-  }
 }/*# sourceMappingURL=footer.css.map */

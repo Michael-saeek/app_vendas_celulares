@@ -6,13 +6,13 @@
     cursor: pointer;
     height: 2rem;
     color: #1d1d1d;
-    padding: 5px 20px;
+    padding: 0;
     transition: all 200ms ease-in-out;
     
     a {
+        padding: 0.6rem 1.2rem;
         text-decoration: none;
         color: inherit;
-        
     }
    
     &:hover {
@@ -28,32 +28,32 @@
 }
 
 .buttonProduto {
-    border: 1px solid black;
     background-color: #DAE3ED;
     border-radius: 5px;
+    border: 0px solid black;
     cursor: pointer;
     color: #1D1D1D;
     padding: 8px 13px;
     transition: all 200ms ease-in-out;
-   
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: 600;
 
     &:hover {
     background-color: #1D1D1D;
     transform: scale(1.1);
     color: #DAE3ED;
     }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+   
+    
+  
 }
 
 .buttom-modificar {
     padding: 10px 13px;
     border-radius: 10px;
     border: 0px;
-
+    margin-right: 1em;
     cursor: pointer;
     transition: all 200ms ease-in-out;
 
@@ -87,30 +87,32 @@
     }
 }
 
-@media (max-width: 476px) {
-    i {
-        font-size: 12px;
-    }
 
-    
+@media (max-width: 667px) {
+
     .buttonAdicionar {
         padding: 5px 10px;
         font-size: 12px
     }
-    
+
+    i {
+        font-size: 12px;
+    }
+
+
+    .buttonAdicionar a {
+        padding: 0.6rem 1rem;
+    }
+
     .buttom-modificar { 
         font-size: 0.5rem;
-        padding: 7px 12px;
+        padding: 10px 35px;
+    
     }
     
     .buttom-delete{ 
         font-size: 0.5rem;
-        padding: 7px 12px;
+        padding: 10px 35px;
+       
     }
-  
-    .list-buttons {
-      right: -4.0rem;
-      grid-area: 3 / 1 / 4 / 3;
-    }
-  
 }

@@ -19,28 +19,31 @@ const Tablerow = ({ id, model, price, brand, cor } ) => {
         }
     }
 
-   
+    function identificacao() {
+        const ID = id.substr(0,8)
+        return ID
+    }
+
 
     return (
         <tr>
-            <td>{id}</td>
-            <td>{model}</td>
-            <td>{price}</td>
-            <td>{brand}</td>
-            <td>{cor}</td>
-            <td>
-                <button className="buttom-modificar" > 
+            <td data-title="Codigo">{identificacao()}</td>
+            <td data-title="Modelo">{model}</td>
+            <td data-title="Preço">{price}</td>
+            <td data-title="Marca">{brand}</td>
+            <td data-title="Cor">{cor}</td>
+            <td className="acoes-btn">
                 <NavLink  exact to={`/modificar/${id}`}>
-                <i className="fas fa-pencil-alt"></i>
+                    <button className="buttom-modificar" > 
+                    <i className="fas fa-pencil-alt"></i>
+                    </button>
                 </NavLink>
-                </button>
-            </td>
 
-            <td>
-               <button className="buttom-delete" onClick={() => apagarRegistro(id)}>
+                <button className="buttom-delete" onClick={() => apagarRegistro(id)}>
                 <i className="fas fa-trash-alt"></i>
                </button>
             </td>
+
         </tr>
     )
 }
